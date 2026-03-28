@@ -1,5 +1,4 @@
-## Deployed Link -
-www.dikshamirgal.xyz
+# Deployed Link - www.dikshamirgal.xyz
 
 # 🚀 Diksha Kailas Mirgal - Personal Portfolio
 
@@ -60,7 +59,7 @@ To run this project locally, follow these steps:
 5. **Open your browser**:
    Navigate to `http://localhost:5173` to see the site in action.
 
-## Deployed on vercel - my-portfolio-ten-woad-35.vercel.app
+# Deployed on vercel - my-portfolio-ten-woad-35.vercel.app
 
 ## 📧 Contact
 
