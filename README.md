@@ -1,3 +1,7 @@
+## Deployed Link -
+www.dikshamirgal.xyz
+my-portfolio-ten-woad-35.vercel.app
+
 # 🚀 Diksha Kailas Mirgal - Personal Portfolio
 
 A sleek, modern, and high-performance personal portfolio built with **React** and **Vite**. This project showcases my journey as a Web Developer, featuring my projects, professional experience, and academic achievements with a premium "Neon Dark" aesthetic.
@@ -56,6 +60,7 @@ To run this project locally, follow these steps:
 
 5. **Open your browser**:
    Navigate to `http://localhost:5173` to see the site in action.
+
 
 ## 📧 Contact
 
