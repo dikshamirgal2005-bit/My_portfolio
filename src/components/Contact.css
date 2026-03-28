@@ -1,0 +1,269 @@
+/* Contact Styles */
+.contact-section {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-desc {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+/* Info Cards */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.contact-info-card:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-card-hover);
+}
+
+.contact-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-info-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.contact-info-value {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.copy-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.copy-btn:hover {
+  border-color: var(--violet);
+  color: var(--violet-light);
+  background: var(--violet-glow);
+}
+
+/* Social Buttons */
+.contact-social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.contact-social-btn.linkedin {
+  background: rgba(10, 102, 194, 0.12);
+  color: #60a5fa;
+  border: 1px solid rgba(10, 102, 194, 0.3);
+}
+
+.contact-social-btn.linkedin:hover {
+  background: rgba(10, 102, 194, 0.22);
+  transform: translateY(-2px);
+}
+
+.contact-social-btn.github {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.contact-social-btn.github:hover {
+  background: rgba(255,255,255,0.12);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.contact-social-btn.email {
+  background: var(--violet-glow);
+  color: var(--violet-light);
+  border: 1px solid rgba(124,58,237,0.3);
+}
+
+.contact-social-btn.email:hover {
+  background: rgba(124,58,237,0.25);
+  transform: translateY(-2px);
+}
+
+/* CTA Card */
+.contact-right {
+  position: relative;
+}
+
+.contact-cta-card {
+  position: relative;
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+}
+
+.cta-card-glow {
+  position: absolute;
+  inset: -2px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-xl);
+  opacity: 0.15;
+  z-index: 0;
+  filter: blur(20px);
+  animation: pulse-glow 4s ease infinite;
+}
+
+.cta-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.cta-emoji {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  animation: wave 2s ease infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(20deg); }
+  80% { transform: rotate(-5deg); }
+}
+
+.cta-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.cta-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.cta-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.cta-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.cta-divider::before, .cta-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.cta-linkedin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  background: rgba(10, 102, 194, 0.12);
+  color: #60a5fa;
+  border: 1px solid rgba(10, 102, 194, 0.3);
+  border-radius: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.cta-linkedin-btn:hover {
+  background: rgba(10, 102, 194, 0.22);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-card-content { padding: 32px 24px; }
+  .contact-social-links { flex-direction: column; }
+  .contact-social-btn { justify-content: center; }
+}

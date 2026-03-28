@@ -1,0 +1,199 @@
+/* Experience Timeline Styles */
+.experience-section {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.experience-header {
+  margin-bottom: 60px;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Center line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--violet), var(--cyan));
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: start;
+  gap: 0;
+}
+
+.timeline-item.left .timeline-card {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right;
+}
+
+.timeline-item.left .timeline-dot {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.timeline-item.left .timeline-card .exp-skills {
+  justify-content: flex-end;
+}
+
+.timeline-item.right .timeline-card {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.timeline-item.right .timeline-dot {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+/* Dot */
+.timeline-dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+/* Card */
+.timeline-card {
+  padding: 24px;
+  position: relative;
+}
+
+.exp-card-top {
+  margin-bottom: 14px;
+}
+
+.exp-type-badge {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 50px;
+  margin-bottom: 8px;
+}
+
+.exp-role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.exp-company {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.exp-period {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.timeline-item.left .exp-period {
+  justify-content: flex-end;
+}
+
+.exp-description {
+  font-size: 0.87rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.exp-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.exp-skill-tag {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.exp-cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid;
+  transition: var(--transition);
+}
+
+.exp-cert-link:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+  .timeline-line { left: 24px; }
+  .timeline-item {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto;
+  }
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+  }
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    margin-top: 20px;
+  }
+  .timeline-item.left .timeline-card .exp-skills {
+    justify-content: flex-start;
+  }
+  .timeline-item.left .exp-period {
+    justify-content: flex-start;
+  }
+}
